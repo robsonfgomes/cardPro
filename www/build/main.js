@@ -55743,12 +55743,11 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n        <ion-icon name="md-game-controller-b"></ion-icon> cardPro\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n        <div class="img-card">\n          <ion-img width="50" hsadsaeight="50" src="assets/img/card-back-0.jpg"></ion-img>\n        </div>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/'<ion-header id="header">\n  <ion-navbar>\n    <ion-title>\n        <ion-icon name="md-game-controller-b"></ion-icon> cardPro\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding id="bg">\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n        <div class="img-card">\n          <ion-img width="50" hsadsaeight="50" src="assets/img/card-back-0.jpg"></ion-img>          \n        </div>\n      </ion-col>      \n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], HomePage);
 
-var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
