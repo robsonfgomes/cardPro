@@ -16,8 +16,8 @@
             <td *ngFor="let tile of row" (click)="game.flipTile(tile)">
               <div class="container">
                 <div class="card" [ngClass]="{flipped: tile.flipped}">
-                  <img class="front" src="assets/img/card-back.png">
-                  <img class="back" src="assets/img/{{tile.title}}.png">
+                  <img class="front" src="assets/img/card-back.jpg">
+                  <img class="back" src="assets/img/{{tile.title}}.jpg">
                 </div>
               </div>
             </td>
