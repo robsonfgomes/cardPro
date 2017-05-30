@@ -20,8 +20,7 @@ function Game(tileNames) {
   this.message = Game.MESSAGE_CLICK;
   this.unmatchedPairs = tileNames.length;
 
-  this.flipTile = function(tile) {
-    console.log('ok');
+  this.flipTile = function(tile) {    
     if (tile.flipped) {
       return;
     }

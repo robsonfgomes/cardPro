@@ -8,30 +8,22 @@
 
 <ion-content padding id="bg">
   <ion-grid>
-    <ion-row>
+    <ion-row justify-content-center>
       <ion-col>
         <div>Pares restantes: {{game.unmatchedPairs}}</div>        
-
         <table>
           <tr *ngFor="let row of game.grid">
             <td *ngFor="let tile of row" (click)="game.flipTile(tile)">
-
-              <!-- this entire block can be replaced with our custom component mgCard:
-          <mg-card tile="tile"></mg-card>
-        -->
               <div class="container">
                 <div class="card" [ngClass]="{flipped: tile.flipped}">
-                  <img class="front" src="assets/img/card-back.jpg">
+                  <img class="front" src="assets/img/card-back.png">
                   <img class="back" src="assets/img/{{tile.title}}.png">
                 </div>
               </div>
-
             </td>
           </tr>
         </table>
-
         <div class="message">{{game.message}}</div>
-
       </ion-col>
     </ion-row>
   </ion-grid>
