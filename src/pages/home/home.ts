@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { Directive } from '@angular/core';
 
 declare var game:any; 
@@ -10,11 +10,22 @@ declare var game:any;
 })
 export class HomePage {  
   
-  game;  
+  game;    
 
-  constructor(public navCtrl: NavController) {    
+  constructor(public navCtrl: NavController, public toastCtrl : ToastController) {    
     this.game = game;      
   } 
+
+  showMessage(msg) : String {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000,
+      position: 'top'
+    });
+    toast.present();
+    this.game.message = "";
+    return '';
+  }
 
 }
 

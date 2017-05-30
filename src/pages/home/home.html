@@ -9,9 +9,8 @@
 <ion-content padding id="bg">
   <ion-grid>
     <ion-row justify-content-center>
-      <ion-col>
-        <div>Pares restantes: {{game.unmatchedPairs}}</div>        
-        <table>
+      <ion-col>                
+        <table class="table">
           <tr *ngFor="let row of game.grid">
             <td *ngFor="let tile of row" (click)="game.flipTile(tile)">
               <div class="container">
@@ -23,7 +22,7 @@
             </td>
           </tr>
         </table>
-        <div class="message">{{game.message}}</div>
+        <div class="message">{{game.message == 'Bom trabalho! Continue assim.' ? showMessage("Bom trabalho! Continue assim."):''}}</div>
       </ion-col>
     </ion-row>
   </ion-grid>
