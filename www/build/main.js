@@ -55738,16 +55738,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.game = game;
     }
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/'<ion-header id="header">\n  <ion-navbar>\n    <ion-title>\n        <ion-icon name="md-game-controller-b"></ion-icon> cardPro\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding id="bg">\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n        <div class="img-card">\n          <ion-img width="50" hsadsaeight="50" src="assets/img/card-back-0.jpg"></ion-img>          \n        </div>\n      </ion-col>      \n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/'<ion-header id="header">\n  <ion-navbar>\n    <ion-title>\n      <ion-icon name="md-game-controller-b"></ion-icon> cardPro\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding id="bg">\n  <ion-grid>\n    <ion-row>\n      <ion-col>\n        <div>Pares restantes: {{game.unmatchedPairs}}</div>        \n\n        <table>\n          <tr *ngFor="let row of game.grid">\n            <td *ngFor="let tile of row" (click)="game.flipTile(tile)">\n\n              <!-- this entire block can be replaced with our custom component mgCard:\n          <mg-card tile="tile"></mg-card>\n        -->\n              <div class="container">\n                <div class="card" [ngClass]="{flipped: tile.flipped}">\n                  <img class="front" src="assets/img/card-back.jpg">\n                  <img class="back" src="assets/img/{{tile.title}}.png">\n                </div>\n              </div>\n\n            </td>\n          </tr>\n        </table>\n\n        <div class="message">{{game.message}}</div>\n\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"D:\xampp\htdocs\cardPro\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -74565,9 +74567,10 @@ var MyApp = (function () {
 MyApp = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"D:\xampp\htdocs\cardPro\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\xampp\htdocs\cardPro\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
 ], MyApp);
 
+var _a, _b, _c;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),

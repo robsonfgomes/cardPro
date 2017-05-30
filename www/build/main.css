@@ -27455,17 +27455,6 @@ ion-navbar.toolbar {
   }
 }
 
-.img-card {
-  text-align: center;
-  padding: 5px;
-  border-radius: 2px;
-  width: 60px;
-  height: 60px;
-  font-size: 1.4rem;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
 #header {
   display: none;
 }
@@ -27473,4 +27462,53 @@ ion-navbar.toolbar {
 #bg {
   background: url("http://localhost:8100/assets/img/bg.jpg") no-repeat center top fixed;
   background-size: cover;
+}
+
+/* memory-game css stylesheet */
+div {
+  font-size: 30px;
+}
+
+.container {
+  width: 165px;
+  height: 200px;
+  position: relative;
+  -webkit-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  background: blue;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.message {
+  text-align: center;
 }

@@ -1,7 +1,7 @@
 <ion-header id="header">
   <ion-navbar>
     <ion-title>
-        <ion-icon name="md-game-controller-b"></ion-icon> cardPro
+      <ion-icon name="md-game-controller-b"></ion-icon> cardPro
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,10 +10,29 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <div class="img-card">
-          <ion-img width="50" hsadsaeight="50" src="assets/img/card-back-0.jpg"></ion-img>          
-        </div>
-      </ion-col>      
+        <div>Pares restantes: {{game.unmatchedPairs}}</div>        
+
+        <table>
+          <tr *ngFor="let row of game.grid">
+            <td *ngFor="let tile of row" (click)="game.flipTile(tile)">
+
+              <!-- this entire block can be replaced with our custom component mgCard:
+          <mg-card tile="tile"></mg-card>
+        -->
+              <div class="container">
+                <div class="card" [ngClass]="{flipped: tile.flipped}">
+                  <img class="front" src="assets/img/card-back.jpg">
+                  <img class="back" src="assets/img/{{tile.title}}.png">
+                </div>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+
+        <div class="message">{{game.message}}</div>
+
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
