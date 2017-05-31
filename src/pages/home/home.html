@@ -28,6 +28,8 @@
           </tr>
         </table>
         <div class="message">{{game.message == 'Bom trabalho! Continue assim.' ? showMessage("Bom trabalho! Continue assim (:"):''}}</div>
+        {{game.timeOut ? showEndGameMessage("Fim de Jogo", "Infelizmente, você não conseguiu terminar o jogo a tempo ):", "Tentar Novamente") : ''}}
+        {{game.message == 'Você venceu!' ? showEndGameMessage("Fim de Jogo", "Você venceu!", "Novo Jogo", 1):''}}
       </ion-col>
     </ion-row>
   </ion-grid>
