@@ -7,7 +7,7 @@ function Tile(title) {
   this.flipped = false;
 }
 
-Tile.prototype.flip = function() {
+Tile.prototype.flip = function () {
   this.flipped = !this.flipped;
 }
 
@@ -18,9 +18,9 @@ function Game(tileNames) {
 
   this.grid = makeGrid(tileDeck);
   this.message = Game.MESSAGE_CLICK;
-  this.unmatchedPairs = tileNames.length;
+  this.unmatchedPairs = tileNames.length;  
 
-  this.flipTile = function(tile) {    
+  this.flipTile = function (tile) {
     if (tile.flipped) {
       return;
     }
@@ -49,7 +49,7 @@ function Game(tileNames) {
         this.message = Game.MESSAGE_MISS;
       }
     }
-  }
+  }    
 }
 
 Game.MESSAGE_CLICK = 'Escolha uma carta.';
@@ -63,7 +63,7 @@ Game.MESSAGE_WON = 'Você venceu!';
 /* Create an array with two of each tileName in it */
 function makeDeck(tileNames) {
   var tileDeck = [];
-  tileNames.forEach(function(name) {
+  tileNames.forEach(function (name) {
     tileDeck.push(new Tile(name));
     tileDeck.push(new Tile(name));
   });
@@ -74,12 +74,12 @@ function makeDeck(tileNames) {
 
 function makeGrid(tileDeck) {
   var gridDimension = Math.sqrt(tileDeck.length),
-      grid = [];
+    grid = [];
 
   for (var row = 0; row < gridDimension; row++) {
     grid[row] = [];
     for (var col = 0; col < gridDimension; col++) {
-        grid[row][col] = removeRandomTile(tileDeck);
+      grid[row][col] = removeRandomTile(tileDeck);
     }
   }
 
@@ -88,11 +88,32 @@ function makeGrid(tileDeck) {
 
 
 function removeRandomTile(tileDeck) {
-  var i = Math.floor(Math.random()*tileDeck.length);
+  var i = Math.floor(Math.random() * tileDeck.length);
   return tileDeck.splice(i, 1)[0];
 }
 
-var tileNames = ['1', '2', '3', '4', '5', '6', '7', '8'];
+function getRandomizer(bottom, top) {
+  var rand =  Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+ 
+  if(tileNames.indexOf(rand) >= 0) {
+    while(tileNames.indexOf(rand) >= 0) {
+      rand =  Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;      
+    }
+  }  
+
+  return rand;
+}
+
+var tileNames = [];
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 51));
+
 
 var game = new Game(tileNames);
 

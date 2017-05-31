@@ -9,12 +9,17 @@
 <ion-content padding id="bg">
   <ion-grid>
     <ion-row justify-content-center>
-      <ion-col>                
+      <ion-col>     
+        <div item-left>
+          <div class="time-to-end" [ngClass]="{hurry: game.hurry}">
+             <ion-icon ios="ios-alarm" md="md-alarm"></ion-icon> {{game.time}}
+          </div>        
+        </div>                
         <table class="table">
           <tr *ngFor="let row of game.grid">
             <td *ngFor="let tile of row" (click)="game.flipTile(tile)">
               <div class="container">
-                <div class="card" [ngClass]="{flipped: tile.flipped}">
+                <div class="card" [ngClass]="{flipped: tile.flipped || initCards}">
                   <img class="front" src="assets/img/card-back.jpg">
                   <img class="back" src="assets/img/{{tile.title}}.jpg">
                 </div>
