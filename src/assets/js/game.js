@@ -105,14 +105,14 @@ function getRandomizer(bottom, top) {
 }
 
 var tileNames = [];
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
-tileNames.push(getRandomizer(1, 51));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
+tileNames.push(getRandomizer(1, 16));
 
 
 var game = new Game(tileNames);
