@@ -27460,7 +27460,7 @@ ion-navbar.toolbar {
 }
 
 #bg {
-  background: url("../../assets/img/bg.jpg") no-repeat center center fixed;
+  background: url("../assets/img/bg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
