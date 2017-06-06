@@ -10,10 +10,13 @@
   <ion-grid>
     <ion-row justify-content-center>
       <ion-col>     
-        <div item-left>
+        <div item-left class="itens-inline">
           <div class="time-to-end" [ngClass]="{hurry: game.hurry}">
              <ion-icon ios="ios-alarm" md="md-alarm"></ion-icon> {{game.time}}
-          </div>        
+          </div>     
+          <div id="countPoints">
+             <img class="front" src="assets/img/coin.gif" id="img-coin">x50
+          </div>   
         </div>                
         <table class="table">
           <tr *ngFor="let row of game.grid">
